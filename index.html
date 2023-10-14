@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cruds-App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Css File -->
+    <link rel="stylesheet" href="./assest/css/style.css" />
+  </head>
+  <body>
+    <div class="cruds">
+      <!-- Start Head -->
+      <div class="head">
+        <h2>Cruds</h2>
+        <p>product management system</p>
+      </div>
+
+      <!-- Start Inputs -->
+      <div class="inputs">
+        <input type="text" placeholder="Title" id="title" />
+        <div class="price">
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="Price"
+            id="price"
+          />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="Taxes"
+            id="taxes"
+          />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="Ads"
+            id="ads"
+          />
+          <input
+            type="number"
+            onkeyup="getTotal()"
+            placeholder="Discount"
+            id="discount"
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" placeholder="Count" id="count" />
+        <input type="text" placeholder="Category" id="category" />
+        <button class="btn-hover" id="submit">Create</button>
+      </div>
+
+      <!-- Start Outputs -->
+      <div class="outputs">
+        <div class="searchBlock">
+          <input
+            onkeyup="searchData(this.value)"
+            type="text"
+            placeholder="search"
+            id="search"
+          />
+          <div class="buttons">
+            <button
+              onclick="getSearch(this.id)"
+              class="btn-hover"
+              id="searchTitle"
+            >
+              Search By Title
+            </button>
+            <button
+              onclick="getSearch(this.id)"
+              class="btn-hover"
+              id="searchCategory"
+            >
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <div id="deleteAll"></div>
+        <table>
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- JS File -->
+    <script src="./assest/js/main.js"></script>
+  </body>
+</html>

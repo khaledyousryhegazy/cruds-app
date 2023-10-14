@@ -1,0 +1,200 @@
+.btn-hover,
+.head h2,
+.inputs button#submit {
+  color: var(--light);
+  text-transform: uppercase;
+}
+.head,
+.inputs,
+.outputs {
+  padding: 10px;
+}
+.inputs .price,
+.outputs .searchBlock .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  gap: 1%;
+}
+.head h2,
+.head p,
+.outputs table {
+  text-align: center;
+}
+.head h2,
+.outputs table th {
+  font-family: var(--Roboto);
+  text-transform: uppercase;
+}
+:root {
+  --light: #fff;
+  --of-white: #eee;
+  --dark: #222;
+  --head-color: #3e6d9c;
+  --orange: #e9983a;
+  --dark-orange: #d37b14;
+  --red: #ed2b2a;
+  --dark-red: #d21312;
+  --blue: #0080ff;
+  --dark-blue: #286098;
+  --poppins: "Poppins", sans-serif;
+  --Roboto: "Roboto", sans-serif;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+body {
+  min-height: 100vh;
+  padding-top: 50px;
+}
+.inputs #total,
+input {
+  padding: 10px 20px;
+  color: var(--dark);
+}
+.btn-hover {
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+.btn-hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--dark-blue);
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn-hover:hover::before {
+  height: 100%;
+}
+.cruds {
+  width: 80%;
+  margin: auto;
+  background-color: var(--of-white);
+}
+.delete-all,
+.outputs table {
+  margin-top: 30px;
+}
+.head {
+  width: 100%;
+  background-color: var(--head-color);
+}
+.head h2 {
+  font-size: 32px;
+  font-weight: 400;
+}
+.head p,
+input {
+  text-transform: capitalize;
+  font-family: var(--poppins);
+}
+.head p {
+  font-size: 17px;
+  color: var(--of-white);
+}
+.inputs {
+  width: 100%;
+  font-family: var(--poppins);
+}
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  outline: 0;
+}
+.inputs .price {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+.inputs #total {
+  background-color: var(--light);
+}
+.inputs #total::before {
+  content: "Total : ";
+  margin-right: 10px;
+  color: var(--dark);
+}
+.inputs .price > * {
+  width: calc(96% / 5) !important;
+}
+.btn-hover,
+.inputs button#submit {
+  width: 100%;
+  border: none;
+  outline: 0;
+  background-color: var(--blue);
+  font-family: var(--poppins);
+  height: 40px;
+  font-size: 18px;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+.outputs .searchBlock {
+  margin-top: 10px;
+}
+.outputs .searchBlock .buttons {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.outputs .searchBlock .buttons > .btn-hover {
+  width: calc(99% / 2);
+}
+.outputs table {
+  width: 100%;
+}
+.outputs table th {
+  padding: 10px 0;
+  background-color: #ddd;
+  font-weight: 500;
+  color: var(--dark);
+}
+.outputs table td {
+  font-family: var(--poppins);
+  color: var(--dark);
+  text-transform: capitalize;
+}
+.outputs table tr {
+  cursor: pointer;
+}
+td,
+th {
+  padding: 5px;
+}
+.outputs table td .btn-hover {
+  width: 60%;
+  letter-spacing: 0;
+  font-size: 16px;
+  border-radius: 7px;
+  height: 30px;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+.outputs table td .btn-hover#update {
+  background-color: var(--orange);
+}
+.outputs table td .btn-hover#update::before {
+  background-color: var(--dark-orange);
+}
+.outputs table td .btn-hover#delete {
+  background-color: var(--red);
+}
+.outputs table td .btn-hover#delete::before {
+  background-color: var(--dark-red);
+}
